@@ -22,7 +22,7 @@ class ExecuteEvent:
     def handleCapcha(self):
         '''验证码识别'''
         import os
-        mode = 1 if os.path.isdir("_userdefined_capt") else 0
+        mode = 1 if os.path.exists("_userdefined_capt.py") else 0
         capCode = self.context["capcode"]
 
         # ===============在线识别===============
